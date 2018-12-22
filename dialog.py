@@ -29,8 +29,8 @@ class Dialog():
     dishes = []
     current_step = 0
     recipes = []
-    key = 'b390bba8e2msh992b9fb4f5c97e1p1118b0jsnf8047683d67d'
-    google_api_key = "AIzaSyDLTUknb2JXZiiWsl_hnnrTxUfz7UHdaOM"
+    key = 'spoonacular key'
+    google_api_key = 'google custom searh key'
     headers = {
         'X-Mashape-Key': key,
         'X-Mashape-Host': 'spoonacular-recipe-food-nutrition-v1.p.mashape.com'
