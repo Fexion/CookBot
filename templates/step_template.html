@@ -1,0 +1,26 @@
+<div class=response_detailed_info>
+  <p style='font-size: 25px; margin: 6px;'>Instructions: </p>
+  {{step.step}}
+
+  <p style='font-size: 25px; margin: 6px;'>Ingredients: </p>
+  <div width=100%>
+  {% for ingr in step.ingredients %}
+    <div class=ingr_pics>
+      <img src='{{ "https://spoonacular.com/cdn/ingredients_100x100/" + ingr.image }}' width=100% style='border:1px solid black'>
+      <br>
+      {{ ingr.name }}
+    </div>
+  {% endfor %}
+  </div>
+
+  <p style='font-size: 25px; margin: 6px;'>Equipment: </p>
+  <div width=100%>
+  {% for equipment in step.equipment %}
+    <div class=ingr_pics>
+      <img src='{{ "https://spoonacular.com/cdn/equipment_100x100/" + equipment.image }}' width=100% style='border:1px solid black'>
+      <br>
+      {{ equipment.name }}
+    </div>
+  {% endfor %}
+</div>
+</div>

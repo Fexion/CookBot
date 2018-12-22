@@ -1,0 +1,18 @@
+<div>
+  Here are some dishes I've found:
+  <ul class=response_list>
+    {% for i, recipe in enumerate(recipe_list) %}
+      <li class=response_list_item>
+        <p style='font-size: 40px; margin:0;'># {{i+1}}</p>
+        <img src='{{ recipe.image }}' width=60% style='border: 1px solid black'>
+        <h3> {{ recipe.title }}</h3>
+        Missed ingredients: {{recipe.missedIngredientCount}}
+        <br>
+        Used ingredients: {{recipe.usedIngredientCount}}
+        <br><br>
+        Ready in {{recipe.readyInMinutes}} minutes.
+
+      </li>
+    {% endfor %}
+  </ul>
+</div>

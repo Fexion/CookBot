@@ -1,0 +1,24 @@
+<div class='response_detailed_info'>
+  <img src='{{ recipe.image }}' width=50% style='border:1px solid black'>
+  <p style='font-size: 30px; margin: 6px;'> {{ recipe.title }} </p>
+  <p style='font-size: 25px; margin: 8px;'>Ingredients: </p>
+  <div>
+  {% for ingr in recipe.missedIngredients %}
+    <div class=ingr_pics>
+      <img src='{{ ingr.image }}' width=100% style='border:1px solid black'>
+      <br>
+      {{ ingr.name }}
+    </div>
+  {% endfor %}
+  {% for ingr in recipe.usedIngredients %}
+    <div class=ingr_pics>
+      <img src='{{ ingr.image }}' width=100% style='border:1px solid black'>
+      <br>
+      {{ ingr.name }}
+    </div>
+  {% endfor %}
+  <p style='font-size: 25px; margin: 8px;'>Cook time: {{recipe.readyInMinutes}} minutes</p>
+</div>
+
+
+</div>
